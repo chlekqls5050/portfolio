@@ -1,0 +1,90 @@
+.header {
+    position: fixed; 
+    top:0; 
+    left:0; 
+    width: 100%; 
+    height: 90px; 
+    line-height: 90px; 
+    z-index: 999;
+}
+.header.fixed {
+    backdrop-filter: saturate(180%) blur(20px); background-image: linear-gradient(180deg,rgba(0,0,0,.1),rgba(0,0,0,.1)); 
+    transition: background-color 0.4s;
+}
+.header > div {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    height:100%;
+}
+.hd_logo_wrap {
+    height:100%;
+}
+.hd_logo_wrap > a {
+    font-family: 'Montserrat', dotum, sans-serif; font-size:36px;
+    font-weight:bold;
+    position:relative; 
+    color:var(--white-color);
+}
+.hd_logo_wrap > a:after {
+    content:""; 
+    position:absolute; 
+    top:5px; 
+    right:-5px; 
+    width:6px;
+    height:6px; 
+    border-radius:50%; 
+    background-color:var(--white-color);
+}
+.hd_menu_wrap > ul {
+    display: flex; 
+    gap:50px;
+}
+.hd_menu_list > a {
+    font-size:16px;
+    font-weight: 500; 
+    text-transform: uppercase; 
+    position:relative; 
+    color: var(--white-color); 
+    font-family:'Montserrat', dotum, sans-serif;
+}
+.hd_menu_list > a:after {
+    content:""; 
+    position:absolute; 
+    top:50%; 
+    left:0; 
+    transform:translateY(-50%); 
+    width:0; 
+    height:2px; 
+    background-color:var(--white-color); 
+    transition:all .2s;
+}
+@media (hover:hover) {
+	.hd_menu_list > a:hover:after {width:100%;}
+}
+
+
+/* 반응형 */
+@media screen and (max-width:1024px){
+	.hd_menu_wrap > ul {gap: 40px;}
+}
+@media screen and (max-width:768px){
+	.header {height:80px; line-height:80px;}
+	.hd_logo_wrap > a {font-size: 32px;}
+	.hd_menu_wrap > ul {gap:30px;}
+	.hd_menu_list > a {font-size: 14px;}
+}
+@media screen and (max-width:570px){
+	.hd_menu_wrap > ul > li:last-child {display:none;}
+}
+@media screen and (max-width:480px){
+	.header {height:70px; line-height:70px;}
+	.hd_logo_wrap > a {font-size: 26px;}
+	.hd_logo_wrap > a:after {top: 3px; width: 5px; height: 5px;}
+	.hd_menu_wrap > ul {gap: 20px;}
+	.hd_menu_list > a {font-size: 13px;}
+}
+@media screen and (max-width:375px){
+	.hd_logo_wrap > a {font-size: 24px;}
+	.hd_menu_list > a {font-size:3.4vw;}
+}
