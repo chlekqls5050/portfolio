@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import MouseCursor from "@/components/cursor";
 
 export const metadata: Metadata = {
   title: "PORTFOLIO",
@@ -16,6 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <MouseCursor />
         <Header />
         <main>
           {children}

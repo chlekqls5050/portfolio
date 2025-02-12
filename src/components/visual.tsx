@@ -4,24 +4,18 @@ import style from "./visual.module.css";
 
 export default function Visual({title}:{title:string}) {
     const [typedText, setTypedText] = useState("");
+  const [index, setIndex] = useState(0);
 
-    useEffect(() => {
-        let index = 0;
-        const speed = 100;
-        let isMounted = true;
-
-        function typeWriter() {
-            if (index < title.length && isMounted) {
-                setTypedText((prev) => prev + title.charAt(index));
-                index++;
-                setTimeout(typeWriter, speed);
-            }
-        }
-        typeWriter();
-        return () => {
-            isMounted = false;
-        };
-    }, [title]);
+  useEffect(() => {
+    if (index < title.length) {
+      const timeout = setTimeout(() => {
+        setTypedText((prev) => prev + title.charAt(index));
+        setIndex((prev) => prev + 1);
+      }, 100);
+      return () => clearTimeout(timeout);
+    }
+  }, [index, title]);
+  
     return (
         <div className={style.visual_wrap}>
             <div className={style.visual_inner_box}>

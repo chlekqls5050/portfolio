@@ -25,40 +25,30 @@
     font-style: italic;
 }
 .visual_wrap .title_wrap span:not(.cursor) {
-    /* width: 100%;
-    display:block; 
-    color:var(--white-color); 
-    -webkit-clip-path: polygon(200% 0, 100% 100%, 0 100%, 0 80%); 
-    clip-path: polygon(200% 0, 100% 100%, 0 100%, 0 80%); opacity: 0; 
-    animation-name:titleani; 
-    animation-timing-function: ease; 
-    animation-duration:1s; 
-	animation-delay:1.8s; 
-	-webkit-animation-fill-mode: forwards; 
-	animatiln-fill-mode:forwards; */
     text-transform: uppercase;
 }
-
 .cursor {
 	border-left: 5px solid var(--white-color);
 	animation: blink 0.7s infinite;
 	display: inline-block;
-	margin-left: 5px;
+	margin-left: 10px;
 	height: 4.3rem;
 	vertical-align: middle;
+	position: relative;
+	top: -5px;
 }
-  
-  @keyframes blink {
+
+@keyframes blink {
 	0% {
-	  opacity: 1;
+		opacity: 1;
 	}
 	50% {
-	  opacity: 0;
+		opacity: 0;
 	}
 	100% {
-	  opacity: 1;
+		opacity: 1;
 	}
-  }
+}
 @keyframes titleani {
   0% {
 	opacity: 0;

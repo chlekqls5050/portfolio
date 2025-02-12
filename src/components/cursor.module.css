@@ -1,0 +1,11 @@
+.mouse_cursor {
+    position: absolute;
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--white-color);
+    mix-blend-mode: difference;
+    z-index:9999;
+  }
+
+  
