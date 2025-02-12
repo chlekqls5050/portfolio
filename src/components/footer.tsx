@@ -3,7 +3,7 @@ import style from './footer.module.css'
 export default function Footer() {
     return (
         <footer className={style.footer}>
-            <div className="w-1400">
+            <div className="w-1280">
                 <div className={style.ft_contact_wrap}>
                     <ul className={style.ft_contact_list}>
                         <li>

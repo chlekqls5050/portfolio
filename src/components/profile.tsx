@@ -5,11 +5,13 @@ import Link from "next/link";
 export default function Profile() {
     return (
         <div className={style.main_content_wr} id="main_profile_wrap">
-			<div className="w-1400">
+			<div className="w-1280">
 				<div className={style.title_wrap}>
-					<p className={style.title} data-scroll><span>profile</span></p>
+					<p className={style.title}><span>profile</span></p>
+					<p className={style.title_bg}><span>profile</span></p>
 				</div>
 				<div className={style.profile_cont_wrap}>
+                    <div className={style.profile_bg}>Profile</div>
 					<div className={style.profile_img_wrap}>
 						<div className={style.inbox}>
 							<Image src="/images/dabeen_profile_img.jpg" fill alt="profile img" />                           
@@ -29,6 +31,8 @@ export default function Profile() {
                                 <p className={style.title}>address</p>
                                 <p className={style.text}>서울시 중랑구 중화동</p>
                             </li>
+                        </ul>
+                        <ul className={style.profile_infor_list}>
                             <li>
                                 <p className={style.title}>e-mail</p>
                                 <p className={style.text}>chlekqls5050@naver.com</p>
@@ -40,10 +44,13 @@ export default function Profile() {
                         </ul>
                     </div>
 				</div>
-				<div className={style.more_btn_wrap}>					
-				  <Link href="./profile.html" className={style.more_btn}>
-					<span>view more 
-                        {/* <Image src="./images/icon_more_btn.png" alt='' fill> */}
+				<div className='more_btn_wr'>					
+				  <Link href="./profile.html" className='more_btn'>
+					<span>
+                        view more
+                        <span className="icon_wrap">
+                            <Image src="/images/icon/icon_more_btn.png" alt='바로가기 화살표' fill />
+                        </span>
                     </span>
 				  </Link>
 				</div>

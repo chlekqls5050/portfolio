@@ -1,5 +1,6 @@
 .header {
-    position: fixed; 
+    /* position: fixed;  */
+    position: absolute;
     top:0; 
     left:0; 
     width: 100%; 
@@ -41,7 +42,7 @@
     gap:50px;
 }
 .hd_menu_list > a {
-    font-size:16px;
+    font-size:.9rem;
     font-weight: 500; 
     text-transform: uppercase; 
     position:relative; 

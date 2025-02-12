@@ -3,7 +3,7 @@ import style from './header.module.css';
 export default function Header() {
     return (
         <header className={style.header}>
-            <div className="w-1400">
+            <div className="w-1280">
                 <div className={style.hd_logo_wrap}>
                     <Link href={'/'}>D</Link>
                 </div>
