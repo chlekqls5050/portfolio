@@ -9,6 +9,9 @@ export default function Skill() {
 					<p className='main_title_bg'><span>skill</span></p>
 				</div>
                 <div className={style.profile_skill_wrap}>
+                    <div className={style.skill_bg}>
+                        <p>skill</p>
+                    </div>
                     <ul className={style.profile_skill_list}>
                         <li>
                             <p className={style.title}>Language</p>
