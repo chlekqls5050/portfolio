@@ -1,10 +1,68 @@
+'use client';
 import Image from "next/image";
 import style from './profile.module.css';
-import Link from "next/link";
+
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useRef, useEffect } from "react";
+
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Profile() {
+    const profileRef = useRef<HTMLDivElement>(null);
+    useEffect(() => {
+        if (!profileRef.current) return;
+        const $el = [
+            profileRef.current.querySelector('[data-id="profileRight"]'),
+            profileRef.current.querySelector('[data-id="profileLeft"]'),
+            profileRef.current.querySelector('[data-id="profileImg"]'),
+            profileRef.current.querySelector('[data-id="topStreamer"]'),
+            profileRef.current.querySelector('[data-id="bottomStreamer"]'),
+            profileRef.current.querySelector('[data-id="profileMark"]'),
+        ];
+        const [profileRight, profileLeft, profileImg, topStreamer, bottomStreamer, profileMark] = $el;
+        const tl = gsap.timeline({
+            scrollTrigger: {
+              trigger: profileRef.current,
+              start: "10% top",
+              end: "+=1000",
+            // end:'bottom bottom',
+              pin: true,
+            //   pinSpacing: true,
+              scrub: .5,
+            },
+          });
+          tl.fromTo(profileLeft,
+            { x: -200, opacity: 0 },
+            { x: 0, opacity: 1, duration: 1 }
+          );
+          tl.fromTo(profileImg,
+            { rotate: 0 },
+            { rotate: -10, duration: 1 }
+          );
+          tl.to(topStreamer, {
+            className: "top_streamer streamer active",
+            duration: 1,
+          });
+          tl.fromTo(
+            profileRight,
+            { x: 100, opacity: 0,},
+            { x: 0, opacity: 1,}
+          );
+          
+          tl.to(profileMark, {
+            className: "mark active",    
+          }, "+=0.5");
+
+          tl.to(bottomStreamer, {
+            className: "bottom_streamer streamer active",
+            duration: 1,
+          });
+    }, []);
+
     return (
-        <div className='main_content_wr' id="main_profile_wrap">
+        <div className='main_content_wr' id="main_profile_wrap" ref={profileRef}>
 			<div className="w-1280">
 				<div className='main_title_wrap'>
 					<p className='main_title'><span>profile</span></p>
@@ -14,10 +72,12 @@ export default function Profile() {
                     <div className={style.profile_bg}>
                         <p>Profile</p>
                     </div>
-                    <div className={style.profile_left_wrap}>
+                    <div data-id="profileLeft" className={style.profile_left_wrap}>
                         <div className={style.profile_img_wrap}>
-                            <div className={style.inbox}>
-                                <Image src="/images/dabeen_profile_img.jpg" fill alt="profile img" />                           
+                            <div data-id="profileImg" className={style.inbox}>
+                                <span data-id="topStreamer" className="top_streamer streamer"></span>
+                                <Image src="/images/dabeen_profile_img.jpg" fill alt="profile img" />     
+                                <span data-id="bottomStreamer" className="bottom_streamer streamer"></span>
                             </div>
                         </div>
                         <div className={style.profile_infor_wrap}>
@@ -33,10 +93,11 @@ export default function Profile() {
                             </ul>
                         </div>
                     </div>
-                    <div className={style.profile_right_wrap}>
+                    
+                    <div data-id="profileRight" className={style.profile_right_wrap}>
                         <div className={style.profile_title_wrap}>
                             <h3>
-                                <span>끊임없이 배우고 노력하는 개발자</span> 최다빈 입니다.
+                                <span className="mark" data-id="profileMark">끊임없이 배우고 노력하는 개발자</span> 최다빈 입니다.
                             </h3>
                         </div>
                         

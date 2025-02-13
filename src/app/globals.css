@@ -88,7 +88,50 @@ body {
     top: 4px;
     left: 4px;
 }
+.mark {
+    position: relative;
+}
+.mark::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    bottom: 0;
+    left: -1%;
+    /* transform: translateX(-50%); */
+    background-color: var(--main-color);
+    opacity: .7;
+    z-index: -1;
+    transition: width .5s;
+}
+.mark.active::after {
+    width: 102%;
+}
+.streamer {
+    content: "";
+    position: absolute;
+    transform: rotate(-45deg);
+    transform-origin: left;
+    height: 20px;
+    /* width: 90px; */
+    width: 0;
+    background-color: #d8d072;
+    opacity: .5;
+    top: 2rem;
+    left: -.75rem;
+    transition: .2s;
+}
+.streamer.active {
+    width: 90px;
+}
+.bottom_streamer {
+    bottom: 2rem;
+    right: -.75rem;
+    transform-origin: right;
 
+    top: initial;
+    left: initial;
+}
 
 /* more_btn */
 .more_btn_wr {

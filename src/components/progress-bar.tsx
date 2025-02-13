@@ -13,12 +13,13 @@ export default function ProgressBar() {
     if (progressRef.current) {
       gsap.to(progressRef.current, {
         height: "100%",
-        ease: "none",
+        // ease: "none",
         scrollTrigger: {
           trigger: "body",
           start: "top top",
-          end: "bottom bottom",
-          scrub: 0.3, // 부드러운 업데이트 (0에 가까울수록 자연스러움)
+          end: "bottom+=1000 bottom",
+          // end: "+=1000",
+          scrub: 0,
         },
       });
     }
