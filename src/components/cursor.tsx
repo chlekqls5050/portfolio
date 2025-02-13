@@ -10,9 +10,9 @@ export default function MouseCursor() {
     const handleMouseMove = (e: MouseEvent) => {
       if (cursorRef.current) {
         gsap.to(cursorRef.current, {
-          duration: 0.4,
-          left: e.pageX - 5,
-          top: e.pageY - 5,
+          duration: 0.3,
+          left: e.pageX - 20,
+          top: e.pageY - 20,
         });
       }
     };

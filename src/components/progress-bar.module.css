@@ -1,0 +1,22 @@
+.progress_wrap {
+    position: fixed;
+    top: 50%;
+    left: 2%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 40%;
+    z-index: 9999;
+    background-color: var(--white-color);
+    opacity: .7;
+  }
+  
+  .progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #8e72d8; /* 게이지 색상 */
+  }
+  
+  

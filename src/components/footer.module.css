@@ -1,5 +1,5 @@
 
-/* right_fix_wr */
+/* 
 .right_fix_wr {
     position: fixed; 
     bottom: 5%;
@@ -23,6 +23,7 @@
 .right_fix_wr a {
     display: block;
 }
+ */
 .icon_wrap {
     width:33px;
     height: 33px;
@@ -38,7 +39,27 @@
     padding:35px 0; 
     color:var(--white-color);
 }
-.footer > div {
+.ft_top_wrap {
+    text-align: right;
+    width: 100%;
+    padding-bottom: .75rem;
+    margin-bottom: .75rem;
+    border-bottom: 1px solid #777;
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+.ft_top_wrap > a {
+    display: inline-block;
+}
+.ft_top_wrap .icon_wrap {
+    display: block;
+    position: relative;
+    transform: none;
+    top: 0;
+    left: 0;
+}
+.ft_bottom_wrap {
     display: flex; 
     align-items: flex-end; 
     justify-content: space-between;

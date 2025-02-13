@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import style from './skill.module.css';
 export default function Skill() {
     return (
@@ -10,22 +11,96 @@ export default function Skill() {
                 <div className={style.profile_skill_wrap}>
                     <ul className={style.profile_skill_list}>
                         <li>
-                            <p className={style.title}>html</p>
-                            <p className={style.text}>웹 표준 및 웹 접근성 고려 / 크로스 브라우징</p>
+                            <p className={style.title}>Language</p>
+                            <ul className={style.skill_category_list}>
+                                <li>
+                                    <div className={style.icon_wrap}>
+                                        <Image src={'/images/icon/icon_skill_html.png'} alt="html 아이콘" fill />
+                                    </div>
+                                    <p>HTML5</p>                                    
+                                </li>
+                                <li>
+                                    <div className={style.icon_wrap}>
+                                        <Image src={'/images/icon/icon_skill_css.png'} alt="css 아이콘" fill />
+                                    </div>
+                                    <p>CSS</p>           
+                                </li>
+                                <li>
+                                    <div className={style.icon_wrap}>
+                                        <Image src={'/images/icon/icon_skill_js.png'} alt="Javacript 아이콘" fill />
+                                    </div>
+                                    <p>Javacript</p>
+                                </li>
+                                <li>
+                                    <div className={style.icon_wrap}>
+                                        <Image src={'/images/icon/icon_skill_ts.png'} alt="Typecript 아이콘" fill />
+                                    </div>
+                                    <p>Typecript</p>
+                                </li>
+                            </ul>
                         </li>
                         <li>
-                            <p className={style.title}>css</p>
-                            <p className={style.text}>PC, Mobile 레이아웃 구현 / 미디어쿼리, 반응형 작업 / Transition, Animation 활용</p>
+                            <p className={style.title}>FrontEnd</p>
+                            <ul className={style.skill_category_list}>
+                                <li>
+                                    <div className={style.icon_wrap}>
+                                        <Image src={'/images/icon/icon_skill_react.png'} alt="React 아이콘" fill />
+                                    </div>
+                                    <p>React</p>
+                                </li>
+                                <li>
+                                    <div className={style.icon_wrap}>
+                                        <Image src={'/images/icon/icon_skill_next.png'} alt="NextJS 아이콘" fill />
+                                    </div>
+                                    <p>NextJS</p>
+                                </li>
+                            </ul>
                         </li>
                         <li>
-                            <p className={style.title}>JS</p>
-                            <p className={style.text}>자바스크립트 / 제이쿼리 / 오픈 소스 활용 및 수정</p>
+                            <p className={style.title}>Design</p>
+                            <ul className={style.skill_category_list}>
+                                <li>
+                                    <div className={style.icon_wrap}>
+                                        <Image src={'/images/icon/icon_skill_ps.png'} alt="Photoshop 아이콘" fill />
+                                    </div>
+                                    <p>Photoshop</p>
+                                </li>
+                                <li>
+                                    <div className={style.icon_wrap}>
+                                        <Image src={'/images/icon/icon_skill_xd.png'} alt="XD 아이콘" fill />
+                                    </div>
+                                    <p>XD</p>
+                                </li>
+                            </ul>
                         </li>
                         <li>
-                            <p className={style.title}>design</p>
-                            <p className={style.text}>
-                                Adobe Photoshop, Adobe XD
-                            </p>
+                            <p className={style.title}>ETC</p>
+                            <ul className={style.skill_category_list}>
+                                <li>
+                                    <div className={style.icon_wrap}>
+                                        <Image src={'/images/icon/icon_skill_github.png'} alt="Git 아이콘" fill />
+                                    </div>
+                                    <p>Git</p>
+                                </li>
+                                <li>
+                                    <div className={style.icon_wrap}>
+                                        <Image src={'/images/icon/icon_skill_figma.png'} alt="Figma 아이콘" fill />
+                                    </div>
+                                    <p>Figma</p>
+                                </li>
+                                <li>
+                                    <div className={style.icon_wrap}>
+                                        <Image src={'/images/icon/icon_skill_notion.png'} alt="Notion 아이콘" fill />
+                                    </div>
+                                    <p>Notion</p>
+                                </li>
+                                <li>
+                                    <div className={style.icon_wrap}>
+                                        <Image src={'/images/icon/icon_skill_vercel.png'} alt="Vercel 아이콘" fill />
+                                    </div>
+                                    <p>Vercel</p>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </div>

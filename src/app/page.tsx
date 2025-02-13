@@ -7,8 +7,8 @@ import Skill from "@/components/skill";
 export default function Home() {
   return (
     <div className={style.container}>
-      <Visual title={`dabeen's portfolio`} />
-      <Profile />
+      {/* <Visual title={`dabeen's portfolio`} />
+      <Profile /> */}
       <Skill />
     </div>
   );
