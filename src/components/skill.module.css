@@ -71,7 +71,9 @@
     color: var(--main-color);
     opacity: .2;
     right: -10%;
-    bottom: -10%;
+    /* bottom: -10%; */
+    top :50%;
+    transform: translateY(-50%);
     text-transform: uppercase;
     font-family: 'Montserrat';
     font-weight: bold;

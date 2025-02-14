@@ -2,8 +2,6 @@
 .profile_bg {
     position: absolute;
     font-size: 5rem;
-    color: var(--main-color);
-    opacity: .2;
     right: -10%;
     bottom: 0%;
     text-transform: uppercase;
@@ -13,10 +11,32 @@
 	overflow: hidden;
 	height: 5rem;
 }
+.text_ani {
+    position: absolute;
+    top: 0;
+    color: rgb(182, 182, 182, .3);
+    background: linear-gradient(to right, rgba(142, 114, 261, .3), rgba(142, 114, 261, .3)) no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: 0%;
+    transition: background-size cubic-bezier(.1,.5,.5,1) 0.5s;
+    animation: textAni 3s linear infinite;
+}
+
+@keyframes textAni {
+    0% {
+        background-size: 0%;
+    }
+    100% {
+        background-size: 100%;
+    }
+  }
+
 .profile_title_wrap > h3 {
     color: var(--white-color);
     font-size: 1.6rem;
     line-height: 1.4;
+    word-break: keep-all;
 }
 .profile_title_wrap > h3 > span {
     position: relative;
@@ -34,9 +54,6 @@
 .profile_right_wrap {
     margin-top: 4rem;
     opacity: 0;
-}
-.profile_right_wrap {
-    /* opacity: 0; */
 }
 /* .profile_bg p {
 	position: absolute;
@@ -84,7 +101,6 @@
 .profile_cont_wrap {
     display: flex;
     gap: 10rem;
-    /* align-items: center; */
     position: relative;
 }
 .profile_img_wrap {
@@ -116,15 +132,6 @@
     position:relative; 
     color:var(--white-color);
     margin-top: 3.5rem;
-    /* transition:all .5s;
-    display: flex;
-    gap: 6rem; */
-}
-.profile_skill_wrap {
-    width:70%; 
-    position:relative; 
-    bottom: 0;
-    transition:all .5s;
 }
 .profile_infor_wrap ul > li {
     display: flex;

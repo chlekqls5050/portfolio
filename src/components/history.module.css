@@ -1,0 +1,46 @@
+.history_cont_wrap {
+    color: var(--white-color);
+    margin-top: 150px;
+    position: relative;
+}
+.history_cont_wrap > ul {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+}
+.data {
+    font-size: .8rem;
+    color: #bbb;
+}
+.company {
+    position: relative;
+    font-size: 1rem;
+    margin-bottom: .5rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+}
+.company::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: -5px;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background-color: var(--sub-color);
+    border-radius: 50%;
+}
+.job {
+    font-size: .8rem;
+}
+.line {
+    position: absolute;
+    width: 0;
+    height: 1px;
+    background-color: var(--white-color);
+    left: 0;
+    top: 48px;
+    z-index: -1;
+}

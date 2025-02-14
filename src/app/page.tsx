@@ -3,13 +3,15 @@ import style from "./page.module.css";
 import Visual from "@/components/visual";
 import Profile from "@/components/profile";
 import Skill from "@/components/skill";
+import History from "@/components/history";
 
 export default function Home() {
   return (
     <div className={style.container}>
-      <Visual title={`dabeen's portfolio`} />
+      {/* <Visual title={`dabeen's portfolio`} />
       <Profile />
-      <Skill />
+      <Skill /> */}
+      <History />
     </div>
   );
 }

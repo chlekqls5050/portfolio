@@ -76,61 +76,36 @@ export default function Skill() {
             }
           );
         });
-        //     trigger: skillRef.current,
-        //     start: "10% top",
-        //     end: "+=1000%",
-        //     scrub: true,
-        //     pin: true,
-        // });
-        // gsap.fromTo(
-        // listRef.current,
-        // { opacity: 0, y: 50 },
-        // {
-        //     opacity: 1,
-        //     y: 0,
-        //     duration: 1,
-        //     stagger: {
-        //     amount: 1, // 전체 애니메이션이 1초 동안 진행됨
-        //     from: "start", // 위에서부터 순차적으로 등장
-        //     },
-        //     ease: "power2.out",
-        //     scrollTrigger: {
-        //     trigger: containerRef.current,
-        //     start: "top 80%",
-        //     toggleActions: "play none none none",
-        //     },
-        // }
-        // );
     }, []);
     return (
         <div className='main_content_wr' id="main_skill_wrap" ref={skillRef}>
 			    <div className="w-1280">
-				<div className='main_title_wrap'>
-					<p className='main_title'><span>skill</span></p>
-					<p className='main_title_bg'><span>skill</span></p>
-				</div>
-                <div className={style.profile_skill_wrap}>
-                    <div className={style.skill_bg}>
-                        <p>skill</p>
-                    </div>
-                    <ul className={style.profile_skill_list}>
-                        {skillsData.map((categoryData, i) => (
-                            <li key={i} ref={(el: HTMLLIElement | null) => {listRefs.current[i] = el;}}>
-                                <p className={style.title}>{categoryData.category}</p>
-                                <ul className={style.skill_category_list}>
-                                    {categoryData.skills.map((skill, j) => (
-                                    <li key={j}>
-                                        <div className={style.icon_wrap}>
-                                            <Image src={skill.icon} alt={`${skill.name} 아이콘`} fill />
-                                        </div>
-                                        <p>{skill.name}</p>
-                                    </li>
-                                    ))}
-                                </ul>
-                            </li>
-                        ))}
-                    </ul>
+            <div className='main_title_wrap'>
+              <p className='main_title'><span>skill</span></p>
+              <p className='main_title_bg'><span>skill</span></p>
+            </div>
+            <div className={style.profile_skill_wrap}>
+                <div className={style.skill_bg}>
+                    <p>skill</p>
                 </div>
+                <ul className={style.profile_skill_list}>
+                    {skillsData.map((categoryData, i) => (
+                        <li key={i} ref={(el: HTMLLIElement | null) => {listRefs.current[i] = el;}}>
+                            <p className={style.title}>{categoryData.category}</p>
+                            <ul className={style.skill_category_list}>
+                                {categoryData.skills.map((skill, j) => (
+                                <li key={j}>
+                                    <div className={style.icon_wrap}>
+                                        <Image src={skill.icon} alt={`${skill.name} 아이콘`} fill />
+                                    </div>
+                                    <p>{skill.name}</p>
+                                </li>
+                                ))}
+                            </ul>
+                        </li>
+                    ))}
+                </ul>
+            </div>
           </div>
         </div>
     )
