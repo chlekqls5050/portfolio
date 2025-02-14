@@ -1,9 +1,110 @@
+'use client';
 import Image from 'next/image';
 import style from './skill.module.css';
+
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useRef, useEffect } from "react";
+
+gsap.registerPlugin(ScrollTrigger);
+const skillsData = [
+  {
+    category: "Language",
+    skills: [
+      { name: "HTML5", icon: "/images/icon/icon_skill_html.png" },
+      { name: "CSS", icon: "/images/icon/icon_skill_css.png" },
+      { name: "Javascript", icon: "/images/icon/icon_skill_js.png" },
+      { name: "Typescript", icon: "/images/icon/icon_skill_ts.png" },
+    ],
+  },
+  {
+    category: "FrontEnd",
+    skills: [
+      { name: "React", icon: "/images/icon/icon_skill_react.png" },
+      { name: "NextJS", icon: "/images/icon/icon_skill_next.png" },
+    ],
+  },
+  {
+    category: "Design",
+    skills: [
+      { name: "Photoshop", icon: "/images/icon/icon_skill_ps.png" },
+      { name: "XD", icon: "/images/icon/icon_skill_xd.png" },
+    ],
+  },
+  {
+    category: "ETC",
+    skills: [
+      { name: "Git", icon: "/images/icon/icon_skill_github.png" },
+      { name: "Figma", icon: "/images/icon/icon_skill_figma.png" },
+      { name: "Notion", icon: "/images/icon/icon_skill_notion.png" },
+      { name: "Vercel", icon: "/images/icon/icon_skill_vercel.png" },
+    ],
+  },
+];
+
 export default function Skill() {
+    const skillRef = useRef<HTMLDivElement>(null);
+    const listRefs = useRef<(HTMLLIElement | null)[]>([]);
+    useEffect(() => {
+      if (!skillRef.current) return;
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: skillRef.current,
+          start: "10% top",
+          end: "+=500",
+          pin: true,
+          scrub: .5,
+        },
+      });
+      listRefs.current.forEach((el, i) => {
+        tl.fromTo(
+            el,
+            {
+              opacity: 0,
+              y: (i === 0 || i === 1) ? -100 : (i === 2 || i === 3) ? 100 : 0,
+              x: (i === 0 || i === 2) ? -100 : (i === 1 || i === 3) ? 100 : 0,
+            },
+            {
+              opacity: 1,
+              y: 0,
+              x: 0,
+              scrollTrigger: {
+                start: "top top",
+                toggleActions: "play none play none"
+              },
+            }
+          );
+        });
+        //     trigger: skillRef.current,
+        //     start: "10% top",
+        //     end: "+=1000%",
+        //     scrub: true,
+        //     pin: true,
+        // });
+        // gsap.fromTo(
+        // listRef.current,
+        // { opacity: 0, y: 50 },
+        // {
+        //     opacity: 1,
+        //     y: 0,
+        //     duration: 1,
+        //     stagger: {
+        //     amount: 1, // 전체 애니메이션이 1초 동안 진행됨
+        //     from: "start", // 위에서부터 순차적으로 등장
+        //     },
+        //     ease: "power2.out",
+        //     scrollTrigger: {
+        //     trigger: containerRef.current,
+        //     start: "top 80%",
+        //     toggleActions: "play none none none",
+        //     },
+        // }
+        // );
+    }, []);
     return (
-        <div className='main_content_wr' id="main_skill_wrap">
-			<div className="w-1280">
+        <div className='main_content_wr' id="main_skill_wrap" ref={skillRef}>
+			    <div className="w-1280">
 				<div className='main_title_wrap'>
 					<p className='main_title'><span>skill</span></p>
 					<p className='main_title_bg'><span>skill</span></p>
@@ -13,101 +114,24 @@ export default function Skill() {
                         <p>skill</p>
                     </div>
                     <ul className={style.profile_skill_list}>
-                        <li>
-                            <p className={style.title}>Language</p>
-                            <ul className={style.skill_category_list}>
-                                <li>
-                                    <div className={style.icon_wrap}>
-                                        <Image src={'/images/icon/icon_skill_html.png'} alt="html 아이콘" fill />
-                                    </div>
-                                    <p>HTML5</p>                                    
-                                </li>
-                                <li>
-                                    <div className={style.icon_wrap}>
-                                        <Image src={'/images/icon/icon_skill_css.png'} alt="css 아이콘" fill />
-                                    </div>
-                                    <p>CSS</p>           
-                                </li>
-                                <li>
-                                    <div className={style.icon_wrap}>
-                                        <Image src={'/images/icon/icon_skill_js.png'} alt="Javacript 아이콘" fill />
-                                    </div>
-                                    <p>Javacript</p>
-                                </li>
-                                <li>
-                                    <div className={style.icon_wrap}>
-                                        <Image src={'/images/icon/icon_skill_ts.png'} alt="Typecript 아이콘" fill />
-                                    </div>
-                                    <p>Typecript</p>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <p className={style.title}>FrontEnd</p>
-                            <ul className={style.skill_category_list}>
-                                <li>
-                                    <div className={style.icon_wrap}>
-                                        <Image src={'/images/icon/icon_skill_react.png'} alt="React 아이콘" fill />
-                                    </div>
-                                    <p>React</p>
-                                </li>
-                                <li>
-                                    <div className={style.icon_wrap}>
-                                        <Image src={'/images/icon/icon_skill_next.png'} alt="NextJS 아이콘" fill />
-                                    </div>
-                                    <p>NextJS</p>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <p className={style.title}>Design</p>
-                            <ul className={style.skill_category_list}>
-                                <li>
-                                    <div className={style.icon_wrap}>
-                                        <Image src={'/images/icon/icon_skill_ps.png'} alt="Photoshop 아이콘" fill />
-                                    </div>
-                                    <p>Photoshop</p>
-                                </li>
-                                <li>
-                                    <div className={style.icon_wrap}>
-                                        <Image src={'/images/icon/icon_skill_xd.png'} alt="XD 아이콘" fill />
-                                    </div>
-                                    <p>XD</p>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <p className={style.title}>ETC</p>
-                            <ul className={style.skill_category_list}>
-                                <li>
-                                    <div className={style.icon_wrap}>
-                                        <Image src={'/images/icon/icon_skill_github.png'} alt="Git 아이콘" fill />
-                                    </div>
-                                    <p>Git</p>
-                                </li>
-                                <li>
-                                    <div className={style.icon_wrap}>
-                                        <Image src={'/images/icon/icon_skill_figma.png'} alt="Figma 아이콘" fill />
-                                    </div>
-                                    <p>Figma</p>
-                                </li>
-                                <li>
-                                    <div className={style.icon_wrap}>
-                                        <Image src={'/images/icon/icon_skill_notion.png'} alt="Notion 아이콘" fill />
-                                    </div>
-                                    <p>Notion</p>
-                                </li>
-                                <li>
-                                    <div className={style.icon_wrap}>
-                                        <Image src={'/images/icon/icon_skill_vercel.png'} alt="Vercel 아이콘" fill />
-                                    </div>
-                                    <p>Vercel</p>
-                                </li>
-                            </ul>
-                        </li>
+                        {skillsData.map((categoryData, i) => (
+                            <li key={i} ref={(el: HTMLLIElement | null) => {listRefs.current[i] = el;}}>
+                                <p className={style.title}>{categoryData.category}</p>
+                                <ul className={style.skill_category_list}>
+                                    {categoryData.skills.map((skill, j) => (
+                                    <li key={j}>
+                                        <div className={style.icon_wrap}>
+                                            <Image src={skill.icon} alt={`${skill.name} 아이콘`} fill />
+                                        </div>
+                                        <p>{skill.name}</p>
+                                    </li>
+                                    ))}
+                                </ul>
+                            </li>
+                        ))}
                     </ul>
                 </div>
-            </div>
+          </div>
         </div>
     )
 }
