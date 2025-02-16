@@ -105,8 +105,8 @@
 }
 .profile_img_wrap {
     position: relative; 
-    width: 320px;
-    height: 400px;
+    width: 300px;
+    height: 370px;
 }
 .profile_img_wrap .inbox {
     position: relative;
@@ -139,7 +139,7 @@
     margin-top: 10px;
 }
 .profile_infor_wrap ul > li .title {
-    width: 130px;
+    width: 110px;
     font-size: 1rem; 
     font-weight: bold; 
     color: var(--sub-color); 

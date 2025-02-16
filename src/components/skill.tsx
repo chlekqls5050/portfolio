@@ -5,42 +5,10 @@ import style from './skill.module.css';
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef, useEffect } from "react";
+import { skillsData } from '@/data/data';
 
 gsap.registerPlugin(ScrollTrigger);
-const skillsData = [
-  {
-    category: "Language",
-    skills: [
-      { name: "HTML5", icon: "/images/icon/icon_skill_html.png" },
-      { name: "CSS", icon: "/images/icon/icon_skill_css.png" },
-      { name: "Javascript", icon: "/images/icon/icon_skill_js.png" },
-      { name: "Typescript", icon: "/images/icon/icon_skill_ts.png" },
-    ],
-  },
-  {
-    category: "FrontEnd",
-    skills: [
-      { name: "React", icon: "/images/icon/icon_skill_react.png" },
-      { name: "NextJS", icon: "/images/icon/icon_skill_next.png" },
-    ],
-  },
-  {
-    category: "Design",
-    skills: [
-      { name: "Photoshop", icon: "/images/icon/icon_skill_ps.png" },
-      { name: "XD", icon: "/images/icon/icon_skill_xd.png" },
-    ],
-  },
-  {
-    category: "ETC",
-    skills: [
-      { name: "Git", icon: "/images/icon/icon_skill_github.png" },
-      { name: "Figma", icon: "/images/icon/icon_skill_figma.png" },
-      { name: "Notion", icon: "/images/icon/icon_skill_notion.png" },
-      { name: "Vercel", icon: "/images/icon/icon_skill_vercel.png" },
-    ],
-  },
-];
+
 
 export default function Skill() {
     const skillRef = useRef<HTMLDivElement>(null);
@@ -52,7 +20,7 @@ export default function Skill() {
         scrollTrigger: {
           trigger: skillRef.current,
           start: "10% top",
-          end: "+=500",
+          end: "+=700",
           pin: true,
           scrub: .5,
         },

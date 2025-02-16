@@ -1,4 +1,5 @@
 'use client';
+import { historyData } from '@/data/data';
 import style from './history.module.css';
 
 import gsap from "gsap";
@@ -7,23 +8,6 @@ import { useRef, useEffect } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const historyData = [
-    {
-        data: '2017. 10 ~ 2019. 10',
-        company: '모바일 의류 쇼핑몰 더옷장',
-        job: '웹 디자이너',
-    },
-    {
-        data: '2020. 08 ~ 2023. 04',
-        company: '웹 에이전시 플랜에이',
-        job: '웹 퍼블리셔',
-    },
-    {
-        data: '2023. 09 ~ 2024. 10',
-        company: '트라이업',
-        job: '웹 퍼블리셔',
-    }
-]
 
 export default function History() {
     const historyRef = useRef<HTMLDivElement>(null);
@@ -32,24 +16,36 @@ export default function History() {
     useEffect(() => {
       if (!historyRef.current) return;
 
-      ScrollTrigger.create({
-        trigger: historyRef.current,
-        start: "10% top",
-        end: "+=500",
-        pin: true,
-        scrub: .5,
+      // ScrollTrigger.create({
+      //   trigger: historyRef.current,
+      //   start: "10% top",
+      //   end: "+=500",
+      //   pin: true,
+      //   scrub: .5,
+      // });
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: historyRef.current,
+          start: "10% top",
+          end: "+=1000",
+          pin: true,
+          scrub: .5,
+        }
       });
-      gsap.to(lineRef.current,
+      tl.to(lineRef.current,
         { width: '100%',
           duration: 3,
+          stagger: 0,
           scrollTrigger: {
+            // trigger: historyRef.current,
             start: "top top",                
             toggleActions: "play none play none"
           },
          }
       );
       listRefs.current.forEach((el, i) => {
-        gsap.fromTo(
+        tl.fromTo(
             el,
             {
               opacity: 0,
@@ -58,6 +54,7 @@ export default function History() {
               opacity: 1,
               delay: i * 1,
               scrollTrigger: {
+                // trigger: historyRef.current,
                 start: "top top",                
                 toggleActions: "play none play none"
               },
@@ -73,12 +70,17 @@ export default function History() {
                     <p className='main_title_bg'><span>history</span></p>
                 </div>
                 <div className={style.history_cont_wrap}>
+                    {/* <div className={style.history_bg}>
+                      <p className={style.text_ani}>history</p>
+                      <p className={style.text}>history</p>
+                    </div> */}
+                  
                     <span className={style.line} ref={lineRef}></span>
                     <ul>
                         {
                             historyData.map((history, i) => (
                                 <li key={i} ref={(el: HTMLLIElement | null) => {listRefs.current[i] = el;}}>
-                                    <p className={style.data}>{history.data}</p>
+                                    <p className={style.date}>{history.date}</p>
                                     <p className={style.company}>{history.company}</p>
                                     <p className={style.job}>{history.job}</p>
                                 </li>

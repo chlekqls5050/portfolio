@@ -8,9 +8,9 @@ import History from "@/components/history";
 export default function Home() {
   return (
     <div className={style.container}>
-      {/* <Visual title={`dabeen's portfolio`} />
+      <Visual title={`dabeen's portfolio`} />
       <Profile />
-      <Skill /> */}
+      <Skill />
       <History />
     </div>
   );

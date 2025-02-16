@@ -26,7 +26,7 @@ export default function Profile() {
             scrollTrigger: {
               trigger: profileRef.current,
               start: "10% top",
-              end: "+=1000",
+              end: "+=1500",
             // end:'bottom bottom',
               pin: true,
             //   pinSpacing: true,
@@ -84,11 +84,11 @@ export default function Profile() {
               <div className={style.profile_infor_wrap}>
                   <ul className={style.profile_infor_list}>
                       <li>
-                          <p className={style.title}>name</p>
-                          <p className={style.text}>최다빈</p>
+                          <p className={style.title}>Name</p>
+                          <p className={style.text}>최다빈 (Choi Dabeen)</p>
                       </li>
                       <li>
-                          <p className={style.title}>birth date</p>
+                          <p className={style.title}>D.O.B.</p>
                           <p className={style.text}>1997.12.10</p>
                       </li>
                   </ul>

@@ -11,12 +11,11 @@ export default function MouseCursor() {
       if (cursorRef.current) {
         gsap.to(cursorRef.current, {
           duration: 0.3,
-          left: e.pageX - 20,
-          top: e.pageY - 20,
+          left: e.pageX - 10,
+          top: e.pageY - 10,
         });
       }
     };
-
     window.addEventListener("mousemove", handleMouseMove);
 
     return () => {

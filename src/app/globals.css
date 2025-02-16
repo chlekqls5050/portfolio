@@ -54,6 +54,7 @@ body {
 
 .main_content_wr {
     padding: 120px 0;
+    /* min-height: 100vh; */
 }
 .main_title_wrap {
     margin-bottom:70px;
