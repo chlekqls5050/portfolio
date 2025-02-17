@@ -23,7 +23,7 @@ export default function RootLayout({
         <Header />
         <main>
           {/* <GsapProvider></GsapProvider> */}
-          <ProgressBar />
+          {/* <ProgressBar /> */}
           {children}
         </main>
         <Footer />

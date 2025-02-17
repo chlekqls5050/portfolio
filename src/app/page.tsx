@@ -4,6 +4,7 @@ import Visual from "@/components/visual";
 import Profile from "@/components/profile";
 import Skill from "@/components/skill";
 import History from "@/components/history";
+import Portfolio from "@/components/portfolio";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Profile />
       <Skill />
       <History />
+      <Portfolio />
     </div>
   );
 }

@@ -56,6 +56,9 @@ body {
     padding: 120px 0;
     /* min-height: 100vh; */
 }
+#main_history_wrap {
+    padding-bottom: 0;
+}
 .main_title_wrap {
     margin-bottom:70px;
 }

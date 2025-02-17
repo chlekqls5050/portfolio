@@ -63,32 +63,32 @@ export default function History() {
         });
     }, []);
     return (
-        <div className='main_content_wr' id="main_history_wrap" ref={historyRef}>
-			<div className="w-1280">
-                <div className='main_title_wrap'>
-                    <p className='main_title'><span>history</span></p>
-                    <p className='main_title_bg'><span>history</span></p>
-                </div>
-                <div className={style.history_cont_wrap}>
-                    {/* <div className={style.history_bg}>
-                      <p className={style.text_ani}>history</p>
-                      <p className={style.text}>history</p>
-                    </div> */}
-                  
-                    <span className={style.line} ref={lineRef}></span>
-                    <ul>
-                        {
-                            historyData.map((history, i) => (
-                                <li key={i} ref={(el: HTMLLIElement | null) => {listRefs.current[i] = el;}}>
-                                    <p className={style.date}>{history.date}</p>
-                                    <p className={style.company}>{history.company}</p>
-                                    <p className={style.job}>{history.job}</p>
-                                </li>
-                            ))
-                        }
-                    </ul>
-                </div>
-            </div>
+      <div className='main_content_wr' id="main_history_wrap" ref={historyRef}>
+        <div className="w-1280">
+              <div className='main_title_wrap'>
+                  <p className='main_title'><span>history</span></p>
+                  <p className='main_title_bg'><span>history</span></p>
+              </div>
+              <div className={style.history_cont_wrap}>
+                  <div className={style.history_bg}>
+                    <p className={style.text_ani}>history</p>
+                    <p className={style.text}>history</p>
+                  </div>
+                
+                  <span className={style.line} ref={lineRef}></span>
+                  <ul>
+                      {
+                          historyData.map((history, i) => (
+                              <li key={i} ref={(el: HTMLLIElement | null) => {listRefs.current[i] = el;}}>
+                                  <p className={style.date}>{history.date}</p>
+                                  <p className={style.company}>{history.company}</p>
+                                  <p className={style.job}>{history.job}</p>
+                              </li>
+                          ))
+                      }
+                  </ul>
+              </div>
         </div>
+      </div>
     )
 }
