@@ -1,0 +1,44 @@
+
+/* #main__contact__wr */
+.contact_ul {display:flex;}
+.contact_list {width:50%; display:flex; align-items: center; gap: 40px;}
+.contact_list .icon_wrap {width: 92px; height: 92px; line-height: 92px; text-align: center; border-radius: 50%; background:#333; position: relative;}
+.contact_list .icon_wrap .inbox {display: inline-block; width:64px; height: 60px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.contact_list .text_wrap {color:#f9f9f9;font-family: 'Montserrat', dotum, sans-serif; }
+.contact_list .text_wrap .title {font-size:20px; font-weight:500; padding-bottom:7px;}
+.contact_list .text_wrap .text {font-size:18px; color:#f9f9f9;}
+
+/* 반응형 */
+@media screen and (max-width:1024px){
+	.contact_list {gap: 30px;}
+	.contact_list .icon_wrap {width: 86px; height: 86px; line-height:86px;}
+	.contact_list .icon_wrap img {width: 56px;}
+	.contact_list .text_wrap .title {font-size: 18px;}
+	.contact_list .text_wrap .text {font-size: 16px;}
+}
+@media screen and (max-width:768px){
+	.contact_list {gap:23px;}
+	.contact_list .icon_wrap {width:75px; height:75px; line-height:75px;}
+	.contact_list .icon_wrap img {width:48px;}
+	.contact_list .text_wrap .title {font-size: 16px;}
+	.contact_list .text_wrap .text {font-size: 14px;}
+}
+@media screen and (max-width:680px){
+	.contact_ul {flex-wrap: wrap; gap: 30px;}
+	.contact_list {width:100%;}
+}
+@media screen and (max-width:570px){
+	.contact_list {gap:20px;}
+	.contact_list .icon_wrap {width:60px; height:60px; line-height:60px;}
+	.contact_list .icon_wrap img {width:38px;}
+	.contact_list .text_wrap .title {font-size: 14px;}
+	.contact_list .text_wrap .text {font-size: 12px;}
+}
+
+@media screen and (max-width:375px){
+	.contact_list {gap:15px;}
+	.contact_list .icon_wrap {width:54px; height:54px; line-height:54px;}
+	.contact_list .icon_wrap img {width:32px;}
+	.contact_list .text_wrap .title {font-size:4vw; padding-bottom: 5px;}
+	.contact_list .text_wrap .text {font-size:3.4vw;}
+}

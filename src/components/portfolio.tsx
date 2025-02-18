@@ -16,29 +16,20 @@ export default function Portfolio() {
 
     useEffect(() => {
       if (!portfolioRef.current) return;
-    //   const tl = gsap.timeline({
-    //     scrollTrigger: {
-    //       trigger: portfolioRef.current,
-    //       start: "5% top",
-    //       end: "+=3000",
-    //       pin: true,
-    //       scrub: .5,
-    //     }
-    //   });
       listRefs.current.forEach((el, i) => {
-        console.log(el);
         gsap.fromTo(
             el,
             {
               opacity: 0,
+              y: 100,
             },
             {
               opacity: 1,
-              delay: i * .5,
+              y: 0,
+              duration: 1.5,
               scrollTrigger: {
-                // trigger: portfolioRef.current,
                 trigger: el,
-                start: "top top",                
+                start: "-=40% top",                
                 toggleActions: "play none play none"
               },
             }

@@ -10,13 +10,10 @@ export default function Header() {
                 <nav className={style.hd_menu_wrap}>
                     <ul>
                         <li className={style.hd_menu_list}>
-                            <Link href={''}>profile</Link>
+                            <Link href={''}>Resume</Link>
                         </li>
                         <li className={style.hd_menu_list}>
-                            <Link href={''}>portfolio</Link>
-                        </li>
-                        <li className={style.hd_menu_list}>
-                            <Link href={''}>contact</Link>
+                            <Link href={''}>Notion</Link>
                         </li>
                     </ul>
                 </nav>

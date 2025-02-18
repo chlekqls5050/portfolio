@@ -17,7 +17,7 @@ export default function ProgressBar() {
         scrollTrigger: {
           trigger: "body",
           start: "top top",
-          end: "bottom+=1000 bottom",
+          end: "bottom+=4500 bottom",
           // end: "+=1000",
           scrub: 0,
         },

@@ -1,34 +1,21 @@
-import Link from 'next/link'
-import style from './footer.module.css'
-import Image from 'next/image'
+'use client';
+import Link from 'next/link';
+import style from './footer.module.css';
+import Image from 'next/image';
+
 export default function Footer() {
+    const topButton = () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }
     return (
         <>
-            {/* <div className={style.right_fix_wr}>
-                <ul>
-                    <li>
-                        <Link href={'tel:010-8662-4218'}>
-                            <span className={style.icon_wrap}>
-                                <Image src="/images/icon/icon_phone.png" alt="전화 아이콘" fill />
-                            </span>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href={'mailto:"chlekqls5050@naver.com'}>
-                            <span className={style.icon_wrap}>
-                                <Image src="/images/icon/icon_email.png" alt="메일 아이콘" fill />
-                            </span>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href={'https://github.com/chlekqls5050'}>
-                            <span className={style.icon_wrap}>
-                                <Image src="/images/icon/icon_git.png" alt="깃 아이콘" fill style={{filter:'invert(1)'}} />
-                            </span>
-                        </Link>
-                    </li>
-                </ul>
-            </div> */}
+            <div className={style.top_btn_wrap}>
+                <button onClick={topButton}>
+                    <span className={style.icon_wrap}>
+                        <Image src="/images/icon/icon_top_btn.png" alt="top button" fill />
+                    </span>
+                </button>
+            </div>
             <footer className={style.footer}>
                 <div className="w-1280">
                     <div className={style.ft_top_wrap}>

@@ -22,8 +22,7 @@ export default function RootLayout({
         <MouseCursor />
         <Header />
         <main>
-          {/* <GsapProvider></GsapProvider> */}
-          {/* <ProgressBar /> */}
+          <ProgressBar />
           {children}
         </main>
         <Footer />
