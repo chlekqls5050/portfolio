@@ -13,12 +13,10 @@ export default function ProgressBar() {
     if (progressRef.current) {
       gsap.to(progressRef.current, {
         height: "100%",
-        // ease: "none",
         scrollTrigger: {
-          trigger: "body",
+          trigger: document.body,
           start: "top top",
-          end: "bottom+=4500 bottom",
-          // end: "+=1000",
+          end: "bottom+=5000 bottom",
           scrub: 0,
         },
       });

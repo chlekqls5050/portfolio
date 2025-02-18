@@ -23,42 +23,40 @@ export default function Profile() {
         ];
         const [profileRight, profileLeft, profileImg, topStreamer, bottomStreamer, profileMark] = $el;
         const tl = gsap.timeline({
-            scrollTrigger: {
-              trigger: profileRef.current,
-              start: "10% top",
-              end: "+=1500",
-            // end:'bottom bottom',
-              pin: true,
-            //   pinSpacing: true,
-              scrub: .5,
-            },
-          });
-          tl.fromTo(profileLeft,
-            { x: -200, opacity: 0 },
-            { x: 0, opacity: 1, duration: 1 }
-          );
-          tl.fromTo(profileImg,
-            { rotate: 0 },
-            { rotate: -10, duration: 1 }
-          );
-          tl.to(topStreamer, {
-            className: "top_streamer streamer active",
-            duration: 1,
-          });
-          tl.fromTo(
-            profileRight,
-            { x: 100, opacity: 0,},
-            { x: 0, opacity: 1,}
-          );
-          
-          tl.to(profileMark, {
-            className: "mark active",    
-          }, "+=0.5");
+          scrollTrigger: {
+            trigger: profileRef.current,
+            start: "10% top",
+            end: "+=1500",
+            pin: true,
+            scrub: .5,
+          },
+        });
+        tl.fromTo(profileLeft,
+          { x: -200, opacity: 0 },
+          { x: 0, opacity: 1, duration: 1 }
+        );
+        tl.fromTo(profileImg,
+          { rotate: 0 },
+          { rotate: -10, duration: 1 }
+        );
+        tl.to(topStreamer, {
+          className: "top_streamer streamer active",
+          duration: 1,
+        });
+        tl.fromTo(
+          profileRight,
+          { x: 100, opacity: 0,},
+          { x: 0, opacity: 1,}
+        );
+        
+        tl.to(profileMark, {
+          className: "mark active",    
+        }, "+=0.5");
 
-          tl.to(bottomStreamer, {
-            className: "bottom_streamer streamer active",
-            duration: 1,
-          });
+        tl.to(bottomStreamer, {
+          className: "bottom_streamer streamer active",
+          duration: 1,
+        });
     }, []);
 
     return (

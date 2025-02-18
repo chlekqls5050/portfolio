@@ -11,11 +11,11 @@ import { useRef, useEffect } from "react";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Portfolio() {
-    const portfolioRef = useRef<HTMLDivElement>(null);
     const listRefs = useRef<(HTMLLIElement | null)[]>([]);
 
     useEffect(() => {
-      if (!portfolioRef.current) return;
+      if (!listRefs.current) return;
+
       listRefs.current.forEach((el, i) => {
         gsap.fromTo(
             el,
@@ -37,7 +37,7 @@ export default function Portfolio() {
         });
     }, []);
     return (
-        <div className='main_content_wr' id="main_portfolio_wrap" ref={portfolioRef}>
+        <div className='main_content_wr' id="main_portfolio_wrap">
             <div className="w-1280">
                 <div className='main_title_wrap'>
                     <p className='main_title'><span>portfolio</span></p>

@@ -1,5 +1,5 @@
 'use client';
-import style from './visual-two.module.css';
+import style from './visual.module.css';
 import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -26,7 +26,7 @@ export default function VisualTwo() {
         scrollTrigger: {
           trigger: visualRef.current,
           start: "top top",
-          end: "+=1000",
+          end: "+=1500",
         //   end: "bottom bottom",
           pin: true,
           scrub: .5,
