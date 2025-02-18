@@ -3,6 +3,7 @@
     height: 100vh;
     box-sizing: border-box;
     position: relative;
+    overflow: hidden;
 }
 .text_wrap {
     font-family: "Syncopate", serif;
@@ -52,4 +53,20 @@
 	100% {
         transform: translate(-50%, 0);
 	}
+}
+
+
+
+@media screen and (max-width:1024px) {
+    .arrow_down { 
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
+@media screen and (max-width:768px) {
+    .arrow_down { 
+        width: 2rem;
+        height: 2rem;
+        bottom: 5%;
+    }
 }

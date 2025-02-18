@@ -207,33 +207,15 @@ body {
 }
 
 /* 반응형 */
-@media screen and (max-width:1024px){
-	.more_btn_wr {
-        margin-top:80px;
-    }
-	.more_btn_wr .more_btn {
-        border:1px solid var(--white-color);
-    }
-	.more_btn_wr .more_btn span {
-        font-size:14px; 
-        padding: 20px 30px 18px;
-    }
+@media screen and (max-width:1024px) {
+    html {
+        font-size: 18px;
+      }
 }
-@media screen and (max-width:768px){
-	.more_btn_wr {
-        margin-top:70px;
+@media screen and (max-width:768px) {   
+    html {
+      font-size: 16px;
     }
-	.more_btn_wr .more_btn span {
-        font-size: 12px; 
-        padding: 17px 27px 15px;
-    }
-	.more_btn_wr .more_btn span img {
-        width: 8px; 
-        margin-left: 8px;
-    }
-
-
-    
     .hidden768 {
         display: none;
     }
@@ -241,22 +223,14 @@ body {
         display: block;
     }
 }
-@media screen and (max-width:570px){
-	.more_btn_wr {
-        margin-top:50px;
-    }
-	.more_btn_wr .more_btn span {
-        padding: 17px 22px 15px;
-    }
+@media screen and (max-width:480px) {
+    html {
+        font-size: 14px;
+      }
 }
-@media screen and (max-width:375px){
-	.more_btn_wr .more_btn span {
-        font-size:3.2vw; 
-        padding: 15px 20px 13px;
+@media screen and (max-width:320px) {
+    html {
+      font-size: 12px;
     }
-	.more_btn_wr .more_btn span img {
-        width:6px; 
-        margin-left:5px; 
-        top:-1px;
-    }
+	
 }

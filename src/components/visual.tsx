@@ -33,10 +33,10 @@ export default function VisualTwo() {
         },
       });
       tl.to(visualBigFirst,
-        { x: -150,}
+        { x: "-12%",}
       );
       tl.to(visualBigLast,
-        { x: 150,}
+        { x: "12%",}
       );
       tl.to(visualBigBox,
         { opacity: 0,}
@@ -45,10 +45,10 @@ export default function VisualTwo() {
         { opacity: 1,}
       );
       tl.to(visualSmallFirst,
-        { x: -150,}
+        { x: "-12%",}
       );
       tl.to(visualSmallLast,
-        { x: 150,}
+        { x: "12%",}
       );
 
     }, []);
