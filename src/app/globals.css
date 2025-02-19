@@ -225,6 +225,9 @@ body {
     html {
       font-size: 16px;
     }
+    .main_content_wr {
+        padding: 100px 0;
+    }
     .main_title_wrap {
         margin-bottom: 30px;
     }
@@ -249,19 +252,31 @@ body {
     html {
         font-size: 14px;
       }
+      .main_content_wr {
+          padding: 70px 0;
+      }
       .streamer.active {
           width: 70px;
       }
 }
 
 @media screen and (max-width:375px) {
+    .main_content_wr {
+        padding: 50px 0;
+    }
     .main_title span {
         font-size: 2rem; 
+    }
+    .streamer.active {
+        width: 55px;
+        height: 10px;
     }
 }
 @media screen and (max-width:320px) {
     html {
-      font-size: 12px;
+      font-size: 14px;
     }
-	
+    .main_content_wr {
+        padding: 30px 0;
+    }
 }
