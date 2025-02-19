@@ -65,7 +65,7 @@ body {
     padding-bottom: 0;
 }
 .main_title_wrap {
-    margin-bottom:70px;
+    margin-bottom: 70px;
 }
 .main_title {
     display: block; 
@@ -90,7 +90,6 @@ body {
     font-size: 2.5rem; 
     font-weight: bold; 
     font-family: 'Montserrat', dotum, sans-serif;
-    /* opacity: 1;  */
     opacity: 0;
     transform: translateY(0) rotate(0deg);
     position: absolute;
@@ -108,7 +107,6 @@ body {
     height: 100%;
     bottom: 0;
     left: -1%;
-    /* transform: translateX(-50%); */
     background-color: var(--main-color);
     opacity: .7;
     z-index: -1;
@@ -123,7 +121,6 @@ body {
     transform: rotate(-45deg);
     transform-origin: left;
     height: 20px;
-    /* width: 90px; */
     width: 0;
     background-color: #d8d072;
     opacity: .5;
@@ -138,73 +135,8 @@ body {
     bottom: 2rem;
     right: -.75rem;
     transform-origin: right;
-
     top: initial;
     left: initial;
-}
-
-/* more_btn */
-.more_btn_wr {
-    display: flex; 
-    flex-wrap: wrap; 
-    justify-content: center; 
-    margin-top:100px;
-}
-.more_btn_wr .more_btn {
-    position: relative; 
-    display: inline-block;
-}
-.more_btn_wr .more_btn span:not(.icon_wrap) {
-    display: inline-block; 
-    font-size:16px; 
-    font-weight:500; 
-    letter-spacing: 2px; 
-    text-transform: uppercase; 
-    padding:20px 30px; 
-    transition: 0.3s; 
-    color:var(--white-color);
-}
-.more_btn_wr .more_btn .icon_wrap {
-    position: relative; 
-    display: inline-block; 
-    width:10px; 
-    margin-left:10px; 
-    margin-top:-2px; 
-    height: 18px; 
-    vertical-align: middle;
-}
-.more_btn_wr .more_btn::before,
-.more_btn_wr .more_btn::after {
-    background: transparent; 
-    z-index: 2; 
-    position: absolute; 
-    content: ""; 
-    width: 0%; 
-    height: 0%;
-    opacity: 0; 
-    transition: width 0.2s 0.15s linear, height 0.15s linear, opacity 0s 0.35s;
-}
-.more_btn_wr .more_btn::before {
-    top: 0; 
-    right: 0; 
-    border-top: 1px solid var(--white-color);
-    border-left: 1px solid var(--white-color);
-}
-.more_btn_wr .more_btn::after {
-    bottom: 0;
-    left: 0; 
-    border-bottom: 1px solid var(--white-color); 
-    border-right: 1px solid var(--white-color);
-}
-
-@media (hover: hover) {
-	.more_btn_wr .more_btn:hover::before,
-	.more_btn_wr .more_btn:hover::after {
-        width:100%; 
-        height:99%; 
-        opacity: 1; 
-        transition: width 0.2s linear, height 0.15s 0.2s linear, opacity 0s;
-    }
 }
 
 /* 반응형 */
