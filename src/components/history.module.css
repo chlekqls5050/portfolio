@@ -80,4 +80,79 @@
     100% {
         background-size: 100%;
     }
-  }
+}
+
+
+  
+/* 반응형 */
+@media screen and (max-width:1280px) {
+}
+@media screen and (max-width:1024px) {
+    .history_bg {
+        font-size: 4rem;
+    }
+    .line {
+        top: 44px;
+    }
+    .history_cont_wrap > ul {
+        gap: 6rem;
+    }
+}
+@media screen and (max-width:768px) {
+    .line {
+        top: 39px;
+    }
+    .history_cont_wrap > ul {
+        gap: 3rem;
+    }
+    .company {
+        font-size: .9rem;
+    }
+}
+@media screen and (max-width:570px) {
+    .history_cont_wrap > ul {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+    
+    .history_cont_wrap > ul > li {
+        position: relative;
+        padding-left: 5%;
+    }
+    .history_cont_wrap > ul > li::after {
+        content: "";
+        position: absolute;
+        left: -5px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 10px;
+        height: 10px;
+        background-color: var(--sub-color);
+        border-radius: 50%;
+    }
+    .company {
+        margin-top: 0;
+        padding-top: 0;
+    }
+    .company::after {
+        display: none;
+    }
+    .line {
+        width: 1px;
+        height: 0;
+        top: 0
+    }
+    .history_cont_wrap {
+        margin-top: 10vw;
+        padding-top: 10vw;
+        padding-bottom: 20vw;
+    }
+}
+@media screen and (max-width:480px) {
+}
+@media screen and (max-width:375px) {
+    .history_bg {
+        font-size: 3rem;
+    }
+}

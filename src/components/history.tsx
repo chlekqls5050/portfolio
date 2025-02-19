@@ -13,17 +13,11 @@ export default function History() {
     const historyRef = useRef<HTMLDivElement>(null);
     const listRefs = useRef<(HTMLLIElement | null)[]>([]);
     const lineRef = useRef<(HTMLSpanElement)>(null);
+
+    let mm = gsap.matchMedia();
+
     useEffect(() => {
       if (!historyRef.current) return;
-
-      // ScrollTrigger.create({
-      //   trigger: historyRef.current,
-      //   start: "10% top",
-      //   end: "+=500",
-      //   pin: true,
-      //   scrub: .5,
-      // });
-
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: historyRef.current,
@@ -33,17 +27,18 @@ export default function History() {
           scrub: .5,
         }
       });
-      tl.to(lineRef.current,
-        { width: '100%',
-          duration: 3,
-          stagger: 0,
-          scrollTrigger: {
-            // trigger: historyRef.current,
-            start: "top top",                
-            toggleActions: "play none play none"
-          },
-         }
-      );
+      mm.add("(min-width: 570px)", () => {
+        tl.to(lineRef.current,
+          { width: '100%',
+            duration: 3,
+            stagger: 0,
+            scrollTrigger: {
+              start: "top top",                
+              toggleActions: "play none play none"
+            },
+          }
+        );
+      });
       listRefs.current.forEach((el, i) => {
         tl.fromTo(
             el,
@@ -55,6 +50,18 @@ export default function History() {
               delay: i * 1,
               scrollTrigger: {
                 // trigger: historyRef.current,
+                start: "top top",                
+                toggleActions: "play none play none"
+              },
+            }
+          );
+        });        
+        mm.add("(max-width: 570px)", () => {
+          tl.to(lineRef.current,
+            { height: '100%',
+              duration: 3,
+              stagger: 0,
+              scrollTrigger: {
                 start: "top top",                
                 toggleActions: "play none play none"
               },
