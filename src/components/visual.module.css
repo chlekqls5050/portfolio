@@ -26,6 +26,7 @@
 .big_text {
     font-size: 12vw;
     font-weight: bold;
+    white-space: nowrap;
 }
 .small_text {
     font-weight: 500;

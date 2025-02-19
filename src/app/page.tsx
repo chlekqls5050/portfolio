@@ -11,12 +11,12 @@ export default function Home() {
   return (
     <div className={style.container}>
       <Visual />
-      {/* <Profile />
+      <Profile />
       <Skill />
       <History />
       <Portfolio />
       <Contact />
-      <Thank /> */}
+      <Thank />
     </div>
   );
 }

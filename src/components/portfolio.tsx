@@ -43,36 +43,34 @@ export default function Portfolio() {
                     <p className='main_title'><span>portfolio</span></p>
                     <p className='main_title_bg'><span>portfolio</span></p>
                 </div>
-
-                
-              <div className={style.portfolio_cont_wrap}>
-                <ul className={style.portfolio_category_list}>
-                    {PortfolioData.map((categoryData, i) => (
-                        <li key={i} ref={(el: HTMLLIElement | null) => {listRefs.current[i] = el;}}>
-                            <p className={style.title}>{categoryData.company}</p>
-                            <ul className={style.portfolio_list}>
-                                {categoryData.portfolioList.map((portfolio, j) => (
-                                <li key={j}>
-                                    <div className={style.image_wrap}>
-                                        <Image src={portfolio.images} alt={`${portfolio.images} 아이콘`} fill />
-                                    </div>
-                                    <div className={style.text_wrap}>
-                                        <div className={style.text_inbox}>
-                                            <p className={style.list_title}>{portfolio.title}</p>
-                                            <p className={style.description}>{portfolio.description}</p>
-                                            <p className={style.engagement}>참여도 : {portfolio.engagement}</p>
-                                            {portfolio.personnel ? <p className={style.personnel}>참여인원 : {portfolio.personnel}</p> : ""}
-                                            <p className={style.skill}>{portfolio.skill}</p>
-                                            <Link className={style.link} href={portfolio.link} target='_blank'>사이트 바로가기</Link>
-                                        </div>
-                                    </div>
-                                </li>
-                                ))}
-                            </ul>
-                        </li>
-                    ))}
-                </ul>
-              </div>
+                <div className={style.portfolio_cont_wrap}>
+                  <ul className={style.portfolio_category_list}>
+                      {PortfolioData.map((categoryData, i) => (
+                          <li key={i} ref={(el: HTMLLIElement | null) => {listRefs.current[i] = el;}}>
+                              <p className={style.title}>{categoryData.company}</p>
+                              <ul className={style.portfolio_list}>
+                                  {categoryData.portfolioList.map((portfolio, j) => (
+                                  <li key={j}>
+                                      <div className={style.image_wrap}>
+                                          <Image src={portfolio.images} alt={`${portfolio.images} 아이콘`} fill />
+                                      </div>
+                                      <div className={style.text_wrap}>
+                                          <div className={style.text_inbox}>
+                                              <p className={style.list_title}>{portfolio.title}</p>
+                                              <p className={style.description}>{portfolio.description}</p>
+                                              <p className={style.engagement}>참여도 : {portfolio.engagement}</p>
+                                              {portfolio.personnel ? <p className={style.personnel}>참여인원 : {portfolio.personnel}</p> : ""}
+                                              <p className={style.skill}>{portfolio.skill}</p>
+                                              <Link className={style.link} href={portfolio.link} target='_blank'>사이트 바로가기</Link>
+                                          </div>
+                                      </div>
+                                  </li>
+                                  ))}
+                              </ul>
+                          </li>
+                      ))}
+                  </ul>
+                </div>
             </div>
         </div>
     )

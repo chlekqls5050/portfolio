@@ -13,26 +13,12 @@
     text-transform: uppercase;
     font-family: 'Montserrat', dotum, sans-serif;
     margin-bottom: 1rem;
-    /* position: absolute;
-    left: -7%;
-    opacity: .6;
-    bottom: -5%;
-    z-index: -1; */
 }
-/* .portfolio_category_list > li:nth-child(1) .title {
-    color: var(--sub-color);
-}
-.portfolio_category_list > li:nth-child(2) .title {
-    color: #3673A6;
-} */
-
 .portfolio_list {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
 }
-
-
 .portfolio_list > li {
     width: calc((100% - 3rem) / 4);
     position: relative;
@@ -59,7 +45,6 @@
     height: 100%;
     opacity: 0;
     transition: opacity .5s;
-    /* z-index: 3; */
 }
 .portfolio_list li .text_inbox {
     position: absolute;
@@ -81,43 +66,13 @@
     padding: 5px 20px;
     position: relative;
 }
-/* .portfolio_list li .image_wrap::before,
-.portfolio_list li .image_wrap::after {
-    background: transparent;
-    z-index: 2; 
-    position: absolute; 
-    content: ""; 
-    width: 0%; 
-    height: 0%; 
-    opacity: 0; 
-    transition: width 0.2s 0.15s linear, height 0.15s linear, 
-    opacity 0s 0.35s;
-}
-.portfolio_list li .image_wrap::before {
-    top: 0; 
-    right: 0; 
-    border-top:2px solid rgba(255,255,255,.7); 
-    border-left:2px solid rgba(255,255,255,.7);
-}
-.portfolio_list li .image_wrap::after {
-    bottom: 0; 
-    left: 0; 
-    border-bottom:2px solid rgba(255,255,255,.7); 
-    border-right:2px solid rgba(255,255,255,.7);
-} */
-
 
 @media (hover: hover) {
     .portfolio_list li:hover .text_wrap { 
         opacity: 1;
     }
-	/* .portfolio_list li:hover .image_wrap::after,
-	.portfolio_list li:hover .image_wrap::before {
-        width: 100%;
-        height: calc(100% - 2px);
-        opacity: 1;
-        transition: width 0.2s linear, height 0.15s 0.2s linear, opacity 0s;
-    } */
 }
 
-/* description,engagement,personnel,personnel,skill,link */
+
+/* 반응형 */
+@media screen and (max-width:1280px) {}

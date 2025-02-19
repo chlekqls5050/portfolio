@@ -25,7 +25,7 @@ export default function VisualTwo() {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: visualRef.current,
-          start: "top top",
+          start: "-10% top",
           end: "+=1500",
         //   end: "bottom bottom",
           pin: true,

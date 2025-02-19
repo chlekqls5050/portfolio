@@ -39,7 +39,7 @@
 }
 .hd_menu_wrap > ul {
     display: flex; 
-    gap:50px;
+    gap:2.5rem;
 }
 .hd_menu_list > a {
     font-size:.9rem;
@@ -67,25 +67,50 @@
 
 /* 반응형 */
 @media screen and (max-width:1024px){
-	.hd_menu_wrap > ul {gap: 40px;}
+	.hd_menu_wrap > ul {
+        gap: 2rem;
+    }
 }
 @media screen and (max-width:768px){
-	.header {height:80px; line-height:80px;}
-	.hd_logo_wrap > a {font-size: 32px;}
-	.hd_menu_wrap > ul {gap:30px;}
-	.hd_menu_list > a {font-size: 14px;}
-}
-@media screen and (max-width:570px){
-	.hd_menu_wrap > ul > li:last-child {display:none;}
+	.header {
+        height:80px; 
+        line-height:80px;
+    }
+	.hd_logo_wrap > a {
+        font-size: 2rem;
+    }
+	.hd_menu_wrap > ul {
+        gap:1.875rem;
+    }
+	.hd_menu_list > a {
+        font-size: 0.875rem;
+    }
 }
 @media screen and (max-width:480px){
-	.header {height:70px; line-height:70px;}
-	.hd_logo_wrap > a {font-size: 26px;}
-	.hd_logo_wrap > a:after {top: 3px; width: 5px; height: 5px;}
-	.hd_menu_wrap > ul {gap: 20px;}
-	.hd_menu_list > a {font-size: 13px;}
+	.header {
+        height:70px;
+        line-height:70px;
+    }
+	.hd_logo_wrap > a {
+        font-size: 26px;
+    }
+	.hd_logo_wrap > a:after {
+        top: 3px;
+        width: 5px; 
+        height: 5px;
+    }
+	.hd_menu_wrap > ul {
+        gap: 20px;
+    }
+	.hd_menu_list > a {
+        font-size: 13px;
+    }
 }
 @media screen and (max-width:375px){
-	.hd_logo_wrap > a {font-size: 24px;}
-	.hd_menu_list > a {font-size:3.4vw;}
+	.hd_logo_wrap > a {
+        font-size: 24px;
+    }
+	.hd_menu_list > a {
+        font-size:3.4vw;
+    }
 }
