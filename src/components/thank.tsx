@@ -11,21 +11,35 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Thank() {
     const thanktRef = useRef<HTMLDivElement>(null);
     const textRef = useRef<HTMLParagraphElement>(null);
+    
+    let mm = gsap.matchMedia();
 
     useEffect(() => {
         if (!thanktRef.current) return;
-        gsap.fromTo(textRef.current,
-            { clipPath: "polygon(-200% 0, 50% 100%, 0 100%, 0% 0%)", },
-            {
-                clipPath: "polygon(100% 0, 110% 100%, 0 100%, 0% 0%)",
-                scrollTrigger: {
-                    trigger: thanktRef.current,
-                    start: "-50% top",    
-                    // end: "+=500",            
-                    // toggleActions: "play none play none"
-                },
-            }
-        );
+        mm.add("(min-width: 570px)", () => {
+            gsap.fromTo(textRef.current,
+                { clipPath: "polygon(-200% 0, 50% 100%, 0 100%, 0% 0%)", },
+                {
+                    clipPath: "polygon(100% 0, 110% 100%, 0 100%, 0% 0%)",
+                    scrollTrigger: {
+                        trigger: thanktRef.current,
+                        start: "-50% top",    
+                    },
+                }
+            );
+        });
+        mm.add("(max-width: 570px)", () => {
+            gsap.fromTo(textRef.current,
+                { clipPath: "polygon(-200% 0, 50% 100%, 0 100%, 0% 0%)", },
+                {
+                    clipPath: "polygon(100% 0, 110% 100%, 0 100%, 0% 0%)",
+                    scrollTrigger: {
+                        trigger: thanktRef.current,
+                        start: "-100% top",    
+                    },
+                }
+            );
+        });
     }, []);
 
     return (
