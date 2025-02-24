@@ -38,7 +38,7 @@
     margin-bottom: 1rem;
     font-weight: 500;
 }
-.portfolio_list li .text_wrap {
+.portfolio_list .text_wrap {
     position: absolute;
     top: 0;
     left: 0;
@@ -48,7 +48,7 @@
     opacity: 0;
     transition: opacity .5s;
 }
-.portfolio_list li .text_inbox {
+.portfolio_list .text_inbox {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -81,7 +81,7 @@
     .portfolio_list > li {
         width: calc((100% - 2rem) / 3);
     }
-    .portfolio_list li .text_wrap { 
+    .portfolio_list .text_wrap { 
         opacity: 1;
     }
 }
@@ -90,24 +90,48 @@
         font-size: 1.2rem;
     }
     .portfolio_list {
-        gap: .5rem;
-    }
-    .portfolio_list > li {
-        width: calc((100% - 1rem) / 3);
-    }
-    .portfolio_list .list_title {
-        margin-bottom: .7rem;
-    }
-}
-@media screen and (max-width:600px) {
-    .portfolio_list {
         gap: 1rem;
     }
     .portfolio_list > li {
-        width: calc((100% - 1rem) / 2);
+        /* width: calc((100% - 1rem) / 3); */
+        width: 100%;
+        display: flex;
     }
+    .image_wrap {
+        width: 35%;
+        padding-top: 38%;
+    }
+    
+    .portfolio_list .text_wrap {
+        position: relative;
+        flex: 1;
+        background-color: #333;
+    }
+    .portfolio_list .list_title {
+        margin-bottom: .7rem;
+        font-size: 1.3rem;
+    }
+    .portfolio_list .text_inbox {
+        font-size: .9rem;
+    }
+}
+@media screen and (max-width:600px) {
     .portfolio_category_list > li {
         margin-bottom: 3rem;
+    }
+    .portfolio_list .list_title {
+        margin-bottom: .4rem;
+        font-size: 1.1rem;
+    }
+    .portfolio_list .text_inbox {
+        font-size: .8rem;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .image_wrap {
+        width: 40%;
+        padding-top: 45%;
     }
 }
 
@@ -115,8 +139,22 @@
     .portfolio_list {
         gap: .5rem;
     }
-    .portfolio_list > li {
-        width: calc((100% - .5rem) / 2);
+    .image_wrap {
+        width: 50%;
+        padding-top: 57.35%;
+    }
+    .link {
+        margin-top: .7rem;
+        padding: 3px 15px;
+        font-size: .7rem;
+    }
+    .portfolio_list .list_title {
+        margin-bottom: .2rem;
+        font-size: 1rem;
+        line-height: 1.2;
+    }
+    .portfolio_list .text_inbox {
+        font-size: .7rem;
     }
 }
 

@@ -209,12 +209,12 @@
         gap: 3rem;
     }
     .profile_bg {
-        font-size: 3rem;
+        font-size: 2.6rem;
+        letter-spacing: -3px;
     }
     .profile_cont_wrap {
         gap: 1rem;
     }
-    
     .profile_infor_wrap {
         margin-top: -30px;
     }

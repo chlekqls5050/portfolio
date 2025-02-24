@@ -126,7 +126,8 @@
 }
 @media screen and (max-width:375px) {
     .contact_bg {
-        font-size: 3rem;
+        font-size: 2.6rem;
+		letter-spacing: -3px;
     }
 	.contact_cont_wrap {
 		padding-bottom: 70px;

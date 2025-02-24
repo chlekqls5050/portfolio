@@ -137,7 +137,8 @@
 }
 @media screen and (max-width:375px) {
     .skill_bg {
-        font-size: 3rem;
+        font-size: 2.6rem;
+        letter-spacing: -3px;
     }
     .skill_category_list .icon_wrap {
         width: 35px;
