@@ -86,7 +86,7 @@ export const PortfolioData: PortfolioCompany[] = [
                 title: "모두의 여행", 
                 images: "/images/portfolio/portfolio_trip.jpg", 
                 link: "https://everyones-trip.vercel.app/",
-                description: "사이트 신규 제작 / 유지보수",
+                description: "사이트 신규 제작",
                 engagement: "100%",
                 personnel: "프론트엔드 개발자 1명",
                 skill: "nextjs, TypeScript, css, supabase, vercel",
