@@ -14,7 +14,7 @@ export default function History() {
     const listRefs = useRef<(HTMLLIElement | null)[]>([]);
     const lineRef = useRef<(HTMLSpanElement)>(null);
 
-    let mm = gsap.matchMedia();
+    const mm = gsap.matchMedia();
 
     useEffect(() => {
       if (!historyRef.current) return;
@@ -68,7 +68,7 @@ export default function History() {
             }
           );
         });
-    }, []);
+    }, [mm]);
     return (
       <div className='main_content_wr' id="main_history_wrap" ref={historyRef}>
         <div className="w-1280">

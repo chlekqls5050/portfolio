@@ -1,5 +1,4 @@
 'use client';
-import Image from "next/image";
 import style from './thank.module.css';
 
 import gsap from "gsap";
@@ -12,7 +11,7 @@ export default function Thank() {
     const thanktRef = useRef<HTMLDivElement>(null);
     const textRef = useRef<HTMLParagraphElement>(null);
     
-    let mm = gsap.matchMedia();
+    const mm = gsap.matchMedia();
 
     useEffect(() => {
         if (!thanktRef.current) return;
@@ -40,7 +39,7 @@ export default function Thank() {
                 }
             );
         });
-    }, []);
+    }, [mm]);
 
     return (
         <div className="main_content_wr" id="main_thank_wr" ref={thanktRef}>

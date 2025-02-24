@@ -25,8 +25,8 @@ export default function VisualTwo() {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: visualRef.current,
-          start: "-10% top",
-          end: "+=1500",
+          start: "top top",
+          end: "+=2000",
         //   end: "bottom bottom",
           pin: true,
           scrub: .5,
@@ -57,7 +57,7 @@ export default function VisualTwo() {
         <div className={style.visual_wrap} ref={visualRef}>
             <div className={style.text_wrap}>
                 <div className={`${style.big_text_box} ${style.text_box}`} data-id="visualBigBox">
-                    <p className={style.big_text} data-id="visualBigFirst">Hello, I'm</p>
+                    <p className={style.big_text} data-id="visualBigFirst">Hello, I&apos;m</p>
                     <p className={style.big_text} data-id="visualBigLast">DaBeen</p>
                 </div>
                 <div className={`${style.small_text_box} ${style.text_box}`} data-id="visualSmallBox">

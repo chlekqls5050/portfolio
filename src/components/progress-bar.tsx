@@ -12,14 +12,15 @@ export default function ProgressBar() {
   useEffect(() => {
     if (progressRef.current) {
       gsap.to(progressRef.current, {
-        height: "100%",
+        width: "100%",
         scrollTrigger: {
-          trigger: document.body,
-          start: "top top",
-          end: "bottom+=5000 bottom",
-          scrub: 0,
-        },
+            trigger: document.documentElement,
+            start: "top top",
+            end: "bottom+=5300 bottom",
+            scrub: 0,
+        }
       });
+    
     }
   }, []);
 

@@ -16,7 +16,7 @@ export default function Portfolio() {
     useEffect(() => {
       if (!listRefs.current) return;
 
-      listRefs.current.forEach((el, i) => {
+      listRefs.current.forEach((el) => {
         gsap.fromTo(
             el,
             {
