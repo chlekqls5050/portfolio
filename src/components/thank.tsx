@@ -15,7 +15,7 @@ export default function Thank() {
 
     useEffect(() => {
         if (!thanktRef.current) return;
-        mm.add("(min-width: 570px)", () => {
+        mm.add("(min-width: 768px)", () => {
             gsap.fromTo(textRef.current,
                 { clipPath: "polygon(-200% 0, 50% 100%, 0 100%, 0% 0%)", },
                 {
@@ -27,7 +27,7 @@ export default function Thank() {
                 }
             );
         });
-        mm.add("(max-width: 570px)", () => {
+        mm.add("(max-width: 768px)", () => {
             gsap.fromTo(textRef.current,
                 { clipPath: "polygon(-200% 0, 50% 100%, 0 100%, 0% 0%)", },
                 {
