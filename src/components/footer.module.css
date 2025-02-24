@@ -105,7 +105,8 @@
     }
     .top_btn_wrap {
         bottom: 3%;
-    }.top_btn_wrap button {
+    }
+    .top_btn_wrap button {
         width: 46px;
         height: 46px;
     }
@@ -120,6 +121,14 @@
     }
     .ft_top_wrap .icon_wrap {
         width: 20px;
+        height: 20px;
+    }
+    .top_btn_wrap button {
+        width: 40px;
+        height: 40px;
+    }
+    .icon_wrap {
+        width: 14px;
         height: 20px;
     }
 }
