@@ -9,6 +9,11 @@ import ProgressBar from "@/components/progress-bar";
 export const metadata: Metadata = {
   title: "PORTFOLIO",
   description: "DABEEN PORTFOLIO",
+  openGraph: {
+    images: {
+      url: '/images/ogimg.jpg',
+    },
+  }
 };
 
 export default function RootLayout({
