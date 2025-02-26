@@ -19,7 +19,7 @@ export default function Footer() {
             <footer className={style.footer}>
                 <div className="w-1280">
                     <div className={style.ft_top_wrap}>
-                        <Link href={'https://github.com/chlekqls5050'} target='_blank'>
+                        <Link href={'https://github.com/chlekqls5050/portfolio'} target='_blank'>
                             <span className={style.icon_wrap}>
                                 <Image src="/images/icon/icon_github.png" alt="github 아이콘" fill style={{filter:'invert(1)'}} />
                             </span>
