@@ -24,9 +24,9 @@ export default function Footer() {
                                 <Image src="/images/icon/icon_github.png" alt="github 아이콘" fill style={{filter:'invert(1)'}} />
                             </span>
                         </Link>
-                        <Link href={'tel:010-8662-4218'}>
+                        <Link href={'https://strong-breadfruit-a4a.notion.site/1a500fb6a08480daa128ec6e27274604'} target='_blank'>
                             <span className={style.icon_wrap}>
-                                <Image src="/images/icon/icon_phone.png" alt="전화 아이콘" fill />
+                                <Image src="/images/icon/icon_notion.png" alt="notion 아이콘" fill style={{filter:'invert(1)'}} />
                             </span>
                         </Link>
                         <Link href={'mailto:"chlekqls5050@naver.com'}>
@@ -34,6 +34,11 @@ export default function Footer() {
                                 <Image src="/images/icon/icon_email.png" alt="메일 아이콘" fill />
                             </span>
                         </Link>
+                        {/* <Link href={'tel:010-8662-4218'}>
+                            <span className={style.icon_wrap}>
+                                <Image src="/images/icon/icon_phone.png" alt="전화 아이콘" fill />
+                            </span>
+                        </Link> */}
                     </div>
                     <div className={style.ft_bottom_wrap}>
                         <div className={style.ft_contact_wrap}>
