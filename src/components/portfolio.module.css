@@ -69,11 +69,20 @@
     position: relative;
 }
 
-@media (hover: hover) {
+
+.portfolio_list li:hover .text_wrap,
+.portfolio_list li:active .text_wrap,
+.portfolio_list li:focus .text_wrap { 
+    opacity: 1;
+}
+
+
+
+/* @media (hover: hover) {
     .portfolio_list li:hover .text_wrap { 
         opacity: 1;
     }
-}
+} */
 
 
 /* 반응형 */
