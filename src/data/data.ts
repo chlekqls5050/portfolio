@@ -1,34 +1,9 @@
-export interface HistoryData {
-    date: string;
-    company: string;
-    job: string;
-}
-export interface SkillData {
-    name: string;
-    icon: string;
-}
-export interface SkillCategory {
-    category: string;
-    skills: SkillData[];
-}
-export interface PortfolioData {
-    title: string;
-    images: string;
-    link: string;
-    description: string;
-    engagement: string;
-    personnel?: string;
-    skill: string;
-}
-export interface PortfolioCompany {
-    company: string;
-    portfolioList: PortfolioData[];
-}
+import { HistoryData,SkillCategory, PortfolioCompany, } from '@/types/types'
 
 export const historyData: HistoryData[] = [
     {
         date: '2017. 10 ~ 2019. 10',
-        company: '모바일 의류 쇼핑몰 더옷장',
+        company: '의류 쇼핑몰 더옷장',
         job: '웹 디자이너',
     },
     {
@@ -40,6 +15,11 @@ export const historyData: HistoryData[] = [
         date: '2023. 09 ~ 2024. 10',
         company: '트라이업',
         job: '웹 퍼블리셔',
+    },
+    {
+        date: '2025. 04 ~ 2025. 08',
+        company: '알파로직',
+        job: '프론트엔드 개발자',
     },
 ];
 
@@ -79,6 +59,29 @@ export const skillsData: SkillCategory[] = [
 ];
   
 export const PortfolioData: PortfolioCompany[] = [
+    {
+        company: "alphalozic",
+        portfolioList: [
+            { 
+                title: "chartmaker", 
+                images: "/images/portfolio/portfolio_chartmaker.jpg", 
+                link: "https://aichartmaker.com/",
+                description: "사이트 유지보수 / 신규개발",
+                engagement: "70% 이상",
+                personnel: "프론트 개발자 1명 / 백엔드 개발자 1명 / 디자이너 1명",
+                skill: "nextjs, TypeScript, css, scss, vercel",
+            },
+            { 
+                title: "alphalozic web", 
+                images: "/images/portfolio/portfolio_alphalozic.jpg", 
+                link: "https://www.alphalozic.com",
+                description: "사이트 신규 제작",
+                engagement: "100%",
+                personnel: "프론트 개발자 1명 / 디자이너 1명",
+                skill: "nextjs, TypeScript, css, scss, vercel",
+            },
+        ],
+    },
     {
         company: "Crafted by Dabeen",
         portfolioList: [
