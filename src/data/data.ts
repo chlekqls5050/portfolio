@@ -60,14 +60,14 @@ export const skillsData: SkillCategory[] = [
   
 export const PortfolioData: PortfolioCompany[] = [
     {
-        company: "alphalozic",
+        company: "ALPHALOZIC",
         portfolioList: [
             { 
                 title: "chartmaker", 
                 images: "/images/portfolio/portfolio_chartmaker.jpg", 
                 link: "https://aichartmaker.com/",
                 description: "사이트 유지보수 / 신규개발",
-                engagement: "70% 이상",
+                // engagement: "70% 이상",
                 personnel: "프론트 개발자 1명 / 백엔드 개발자 1명 / 디자이너 1명",
                 skill: "nextjs, TypeScript, css, scss, vercel",
             },
@@ -78,12 +78,12 @@ export const PortfolioData: PortfolioCompany[] = [
                 description: "사이트 신규 제작",
                 engagement: "100%",
                 personnel: "프론트 개발자 1명 / 디자이너 1명",
-                skill: "nextjs, TypeScript, css, scss, vercel",
+                skill: "nextjs, TypeScript, scss, vercel",
             },
         ],
     },
     {
-        company: "Crafted by Dabeen",
+        company: "Personal Project",
         portfolioList: [
             { 
                 title: "모두의 여행", 

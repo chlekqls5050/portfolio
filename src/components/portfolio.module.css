@@ -30,19 +30,17 @@
     width: 100%;
     padding-top: 114.7%;
 }
-.portfolio_list .text_wrap {
-    color: var(--white-color);
-}
 .portfolio_list .list_title {
     font-size: 1.2rem;
     margin-bottom: 1rem;
     font-weight: 500;
 }
 .portfolio_list .text_wrap {
+    color: var(--white-color);
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(0,0,0,.5);
+    background-color: rgba(0,0,0,.8);
     width: 100%;
     height: 100%;
     opacity: 0;
@@ -68,15 +66,53 @@
     padding: 5px 20px;
     position: relative;
 }
-
-
 .portfolio_list li:hover .text_wrap,
 .portfolio_list li:active .text_wrap,
 .portfolio_list li:focus .text_wrap { 
     opacity: 1;
 }
 
+/* swiper ver */
+.swiper_list_wrap {
+    position: relative;
+}
+.category_btn_wrap {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 50px;
+    margin-left: -.75rem;
+}
+.category_btn_wrap > button {
+    background-color: transparent;
+    border: none;
+    color: var(--white-color);
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0;
+    padding: 10px 1rem;
+    font-family: 'Montserrat', dotum, sans-serif;
+}
+.category_btn_wrap > button.active {
+    position: relative;
+    font-weight: 600;
+}
+.category_btn_wrap > button.active::before {
+    content:"";
+    position: absolute;
+    bottom: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 1.5rem);
+    height: 2px;
+    background-color: var(--white-color);
+}
 
+
+.swiper_list_wrap .portfolio_list:hover .text_wrap,
+.swiper_list_wrap .portfolio_list:active .text_wrap,
+.swiper_list_wrap .portfolio_list:focus .text_wrap { 
+    opacity: 1;
+}
 
 /* @media (hover: hover) {
     .portfolio_list li:hover .text_wrap { 
@@ -93,6 +129,9 @@
     .portfolio_list .text_wrap { 
         opacity: 1;
     }
+    .category_btn_wrap {
+        margin-bottom: 40px;
+    }
 }
 @media screen and (max-width:768px) {
     .portfolio_category_list .title {
@@ -100,6 +139,7 @@
     }
     .portfolio_list {
         gap: 1rem;
+        align-items: center;
     }
     .portfolio_list > li {
         /* width: calc((100% - 1rem) / 3); */
@@ -107,24 +147,52 @@
         display: flex;
     }
     .image_wrap {
-        width: 35%;
-        padding-top: 38%;
+        /* width: 35%;
+        padding-top: 38%; */
+        width: 50%;
+        padding-top: 57.35%;
     }
-    
     .portfolio_list .text_wrap {
         position: relative;
         flex: 1;
         background-color: #333;
     }
     .portfolio_list .list_title {
-        margin-bottom: .7rem;
+        margin-bottom: .8rem;
         font-size: 1.3rem;
     }
     .portfolio_list .text_inbox {
         font-size: .9rem;
+        text-align: left;
+        width: 90%;
+        line-height: 1.6;
+        top: calc(50% - 20px);
     }
+    .portfolio_category_list {
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    .category_btn_wrap {
+        margin-bottom: 50px;
+        margin-left: -.5rem;
+    }
+    .category_btn_wrap > button {
+        font-size: 1rem;
+        padding: 10px .5rem;
+    }
+    .category_btn_wrap > button.active::before {
+        width: calc(100% - 1rem);
+    }
+    .link {
+        margin-top: 2rem;
+    }
+
 }
 @media screen and (max-width:600px) {
+    .portfolio_category_list {
+        width: 90%;
+    }
     .portfolio_category_list > li {
         margin-bottom: 3rem;
     }
@@ -134,17 +202,36 @@
     }
     .portfolio_list .text_inbox {
         font-size: .8rem;
+        width: 100%;
+        top: calc(50% - 10px);
+    }
+    .link {
+        margin-top: 1rem;
+    }
+
+    .category_btn_wrap > button {
+        font-size: .9rem;
+        padding: 7px .25rem;
     }
 }
-
 @media screen and (max-width:480px) {
-    .image_wrap {
+    /* .image_wrap {
         width: 40%;
         padding-top: 45%;
+    } */
+     
+    .portfolio_category_list {
+        width: 100%;
+    }
+    .category_btn_wrap {
+        margin-left: 0rem;
+        margin-bottom: 30px;
+    }
+    .category_btn_wrap > button.active::before {
+        width: calc(100% - .25rem);
     }
 }
-
-@media screen and (max-width:375px) {
+@media screen and (max-width:376px) {
     .portfolio_list {
         gap: .5rem;
     }
@@ -164,14 +251,25 @@
     }
     .portfolio_list .text_inbox {
         font-size: .7rem;
+        width: 90%;
+    }
+    .category_btn_wrap {
+        gap: .5rem;
+    }
+    
+    .category_btn_wrap > button {
+        font-size: .85rem;
     }
 }
-
 @media screen and (max-width:320px) {
     .portfolio_list {
         gap: 1rem;
     }
     .portfolio_list > li {
         width: 100%;
+    }
+    
+    .category_btn_wrap > button {
+        font-size: .75rem;
     }
 }

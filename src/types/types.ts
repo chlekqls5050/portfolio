@@ -16,7 +16,7 @@ export interface PortfolioData {
     images: string;
     link: string;
     description: string;
-    engagement: string;
+    engagement?: string;
     personnel?: string;
     skill: string;
 }
