@@ -15,17 +15,20 @@ export default function Contact() {
     
     useEffect(() => {
         if (!contactRef.current) return;
-        gsap.fromTo(listRef.current,
-            { opacity: 0, y: 150, },
+
+        gsap.fromTo(
+            contactRef.current,
+            { opacity: 0, y: 150 },
             {
-                opacity: 1,
-                y: 0, 
-                scrollTrigger: {
-                    trigger: contactRef.current,
-                    start: "-20% top",    
-                    end: "+=500",            
-                    toggleActions: "play none play none"
-                },
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            scrollTrigger: {
+                trigger: contactRef.current,
+                start: "top 80%",
+                end: "bottom 20%",
+                toggleActions: "play reverse play reverse",
+            },
             }
         );
     }, []);

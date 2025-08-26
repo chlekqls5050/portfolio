@@ -36,17 +36,20 @@ export default function Portfolio() {
     
     useEffect(() => {
         if (!listRefs.current) return;
-        gsap.fromTo(listRefs.current,
-            { opacity: 0, y: 150, },
+
+        gsap.fromTo(
+            listRefs.current,
+            { opacity: 0, y: 150 },
             {
-                opacity: 1,
-                y: 0, 
-                scrollTrigger: {
-                    trigger: listRefs.current,
-                    start: "-20% top",    
-                    end: "+=500",            
-                    toggleActions: "play none play none"
-                },
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            scrollTrigger: {
+                trigger: listRefs.current,
+                start: "top 80%",
+                end: "bottom 20%",
+                toggleActions: "play reverse play reverse",
+            },
             }
         );
     }, []);
