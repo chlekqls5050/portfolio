@@ -4,6 +4,7 @@ import style from './portfolio.module.css';
 import Image from "next/image";
 import Link from 'next/link';
 
+import type { Swiper as SwiperType } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import 'swiper/css';
@@ -18,7 +19,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Portfolio() {
     const listRefs = useRef<HTMLDivElement>(null);
-    const swiperRef = useRef<any>(null);
+    const swiperRef = useRef<SwiperType | null>(null);
     
     const [activeCompany, setActiveCompany] = useState(PortfolioData[0].company);
     const selectedPortfolio = PortfolioData.find((item) => item.company === activeCompany)?.portfolioList;
@@ -79,7 +80,7 @@ export default function Portfolio() {
                 spaceBetween: 20,
             },
         },
-        onSwiper: (swiper: any) => {
+        onSwiper: (swiper: SwiperType) => {
             swiperRef.current = swiper;
         },
     };
